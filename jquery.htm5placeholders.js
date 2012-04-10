@@ -7,7 +7,7 @@
  */
 (function( $ ) {
 
-	var supportedInputTypes = ['text', 'email', 'password', 'search'];
+	var supportedInputTypes = ['email', 'password', 'search', 'tel', 'text'];
 
 	var placeholderSupport = function() {
 		var input = document.createElement('input');
@@ -15,7 +15,7 @@
 	};
 	
 	var inputTypeSupported = function( $field ) {
-		return ( $.inArray( $field.attr('type'), supportedInputTypes) >= 0);
+		return ( $.inArray( $field.attr('type'), supportedInputTypes) >= 0 );
 	};
 	
 	$.fn.html5placeholders = function() {
@@ -25,11 +25,12 @@
 			
 			if( placeholderSupport() ) {
 				
-				$form.find('input').each(function() { 
+				$form.find('input').each(function() {
 					
 					var $field = $(this),
 						$label = $form.find('label[for=' + $field.attr('name') +']').first();
 					
+
 					if($label.length && inputTypeSupported( $field )) {
 						$field.attr('placeholder', $label.text());
 						$label.hide();
