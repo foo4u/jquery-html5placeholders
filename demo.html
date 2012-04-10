@@ -1,0 +1,42 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<h1>Sample Form with Placeholder Support</h1>
+		<form id="testForm" name="test">
+			
+			<div>
+				<label for="name">First &amp; Last Name</label>
+				<input type="text" name="name" />
+			</div>
+						
+			<div>
+				<label for="email">Email Address</label>
+				<input type="email" name="email" />
+			</div>
+			
+			<div>
+				<label for="password">Password</label>
+				<input type="password" name="password" />
+			</div>
+			
+			<div>
+				<input type="checkbox" id="optIn" name="optIn" value="x" />
+				<label for="optIn">Join our mailing list</label>
+			</div>
+			
+		</form>
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="./jquery.htm5placeholders.js"></script>
+		
+		<script type="text/javascript">
+		//<![CDATA[
+			$(document).ready(function() {
+				$('#testForm').html5placeholders();
+			});
+		//]]>
+		</script>
+		
+	</body>
+</html>
