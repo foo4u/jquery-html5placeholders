@@ -61,7 +61,7 @@ This will be converted to the view below, only if the browser supports placehold
 Requirements
 ------------
 
-This plugin requires only requires [jQuery](http://jquery.com/) 1.4 or newer.
+This plugin requires [jQuery](http://jquery.com/) 1.4 or newer.
 
 Testing
 -------
