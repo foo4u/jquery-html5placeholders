@@ -9,10 +9,25 @@ on clients that support HTML5 but fall back to `label` tags when the placeholder
 
 Using this plugin, you code your forms with standard `label` elements and then invoke this plugin to convert those labels into placeholders
 where supported using [progressive enhancement](http://en.wikipedia.org/wiki/Progressive_enhancement).
+
+Usage
+-----
+
+	<script type="text/javascript" src="./jquery.min.js"></script>
+	<script type="text/javascript" src="./jquery.htm5placeholders.js"></script>
+		
+	<script type="text/javascript">
+	//<![CDATA[
+		$(document).ready(function() {
+			// replace formId with the id of your form element 
+			$('#formId').html5placeholders();
+		});
+	//]]>
+	</script>
  
 
-Sample
-------
+Sample Code
+-----------
 
 Create an HTML form with a label for each input:
 
@@ -31,8 +46,37 @@ On browsers that support HTML5 placeholders, this plugin converts the form to:
 		</div>
 	</form>
 
+Demo
+----
+
+This plugin will progressively enhance an HTML form by hiding labels and using the label text as a placeholder in the input field.
+
+![Before Enhancement][before_image]
+
+This will be converted to the view below, only if the browser supports placeholders.
+
+![After Enhancement][after_image]
+
+
 Requirements
 ------------
 
 This plugin requires only requires [jQuery](http://jquery.com/) 1.4 or newer.
 
+Testing
+-------
+
+Tested with desktop browsers:
+
+* Google Chrome / Mac OS
+* Safari / Mac OS
+* IE 8 / Windows XP
+
+Tested with mobile browsers:
+
+* Mobile Safari / iOS 5
+* Google Chrome / Android 4.0
+* IE 9 / Windows Phone 7.5
+
+[before_image]: https://s3.amazonaws.com/jquery-html5placeholders/html5placeholder_demo_before.png
+[after_image]: https://s3.amazonaws.com/jquery-html5placeholders/html5placeholder_demo_after.png
