@@ -18,7 +18,15 @@
 		return ( $.inArray( $field.attr('type'), supportedInputTypes) >= 0 );
 	};
 	
-	$.fn.html5placeholders = function() {
+	$.fn.html5placeholders = function( options ) {
+	
+		var settings = $.extend(
+			{
+				hideSelectLabels: true
+			}, 
+			options
+		);
+		
 		return this.each(function () {
 			// plugin contents here
 			var $form = $(this);
@@ -30,12 +38,18 @@
 					var $field = $(this),
 						$label = $form.find('label[for=' + $field.attr('name') +']').first();
 					
-
 					if($label.length && inputTypeSupported( $field )) {
 						$field.attr('placeholder', $label.text());
 						$label.hide();
 					}
 				});
+				
+				// hide select labels if requested
+				if( settings.hideSelectLabels ) {
+					$form.find('select').each(function() {
+						$form.find('label[for=' + $(this).attr('name') +']').hide();	
+					});
+				}	
 			}
 		});
 	}
