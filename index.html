@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="jquery-htm5placeholders : jQuery plugin to simplify working with HTML forms when HTML5 placeholder support is present." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>jquery-htm5placeholders</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/foo4u/jquery-htm5placeholders">Fork Me on GitHub</a>
+
+          <h1 id="project_title">jquery-htm5placeholders</h1>
+          <h2 id="project_tagline">jQuery plugin to simplify working with HTML forms when HTML5 placeholder support is present.</h2>
+
+          <section id="downloads">
+            <a class="zip_download_link" href="https://github.com/foo4u/jquery-htm5placeholders/zipball/master">Download this project as a .zip file</a>
+            <a class="tar_download_link" href="https://github.com/foo4u/jquery-htm5placeholders/tarball/master">Download this project as a tar.gz file</a>
+          </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>jQuery HTML5 Placeholders Plugin</h1>
+
+<p>Provides a <a href="http://jquery.com/">jQuery</a> plugin to simplify working with HTML labels and HTML5 placeholders in form input tags.</p>
+
+<p>This plugin aims to simplify development of forms in which you want display  <code>input</code> tags with HTML5 placeholders instead of <code>label</code> tags
+on clients that support HTML5 but fall back to <code>label</code> tags when the placeholder attribute isn't supported.</p>
+
+<p>You code your forms with standard <code>label</code> elements and then invoke this plugin to convert those labels into placeholders.
+The plugin operates using <a href="http://en.wikipedia.org/wiki/Progressive_enhancement">progressive enhancement</a> to provide backwards
+compatibility with browsers lacking placeholder support.</p>
+
+<h2>Usage</h2>
+
+<pre><code>&lt;script type="text/javascript" src="./jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./jquery.htm5placeholders.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[
+    $(document).ready(function() {
+        // replace formId with the id of your form element 
+        $('#formId').html5placeholders();
+    });
+//]]&gt;
+&lt;/script&gt;
+</code></pre>
+
+<h2>Sample Code</h2>
+
+<p>Create an HTML form with a label for each input:</p>
+
+<pre><code>&lt;form id="testForm" name="test"&gt;
+    &lt;div&gt;
+        &lt;label for="name"&gt;First &amp;amp; Last Name&lt;/label&gt;
+        &lt;input type="text" name="name" /&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>On browsers that support HTML5 placeholders, this plugin converts the form to:</p>
+
+<pre><code>&lt;form id="testForm" name="test"&gt;
+    &lt;div&gt;
+        &lt;input type="text" name="name" placeholder="First &amp;amp; Last Name" /&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+
+<h2>Demo</h2>
+
+<p>This plugin will progressively enhance an HTML form by hiding labels and using the label text as a placeholder in the input field.</p>
+
+<p><img src="https://s3.amazonaws.com/jquery-html5placeholders/html5placeholder_demo_before.png" alt="Before Enhancement"></p>
+
+<p>This will be converted to the view below, only if the browser supports placeholders.</p>
+
+<p><img src="https://s3.amazonaws.com/jquery-html5placeholders/html5placeholder_demo_after.png" alt="After Enhancement"></p>
+
+<h2>Requirements</h2>
+
+<p>This plugin requires <a href="http://jquery.com/">jQuery</a> 1.4 or newer.</p>
+
+<h2>Testing</h2>
+
+<p>Tested with desktop browsers:</p>
+
+<ul>
+<li>Google Chrome / Mac OS</li>
+<li>Safari / Mac OS</li>
+<li>IE 8 / Windows XP</li>
+</ul><p>Tested with mobile browsers:</p>
+
+<ul>
+<li>Mobile Safari / iOS 5</li>
+<li>Google Chrome / Android 4.0</li>
+<li>IE 9 / Windows Phone 7.5</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">jquery-htm5placeholders maintained by <a href="https://github.com/foo4u">foo4u</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
