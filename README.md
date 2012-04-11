@@ -7,8 +7,9 @@ This plugin aims to simplify development of forms in which you want display  `in
 on clients that support HTML5 but fall back to `label` tags when the placeholder attribute isn't supported.
 
 
-Using this plugin, you code your forms with standard `label` elements and then invoke this plugin to convert those labels into placeholders
-where supported using [progressive enhancement](http://en.wikipedia.org/wiki/Progressive_enhancement).
+You code your forms with standard `label` elements and then invoke this plugin to convert those labels into placeholders.
+The plugin operates using [progressive enhancement](http://en.wikipedia.org/wiki/Progressive_enhancement) to provide backwards
+compatibility with browsers lacking placeholder support.
 
 Usage
 -----
