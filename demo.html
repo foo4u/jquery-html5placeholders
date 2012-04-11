@@ -1,42 +1,81 @@
 <html>
 	<head>
+		<style type="text/css">
+		
+			body {
+				font-family: Helvetica, Arial;
+			}
+		
+			fieldset {
+				border: 1px solid #aaaaaa;
+			}
+			
+			label {
+				min-width: 200px;
+				width: 200px;
+			}
+			
+			input, select {
+				min-width: 250px;
+				margin-bottom: 10px;
+			}
+		
+		</style>
 	</head>
 	<body>
 		<h1>Sample Form with Placeholder Support</h1>
 		<form id="testForm" name="test">
 			
-			<div>
-				<label for="name">First &amp; Last Name</label>
-				<input type="text" name="name" />
-			</div>
-						
-			<div>
-				<label for="email">Email Address</label>
-				<input type="email" name="email" />
-			</div>
-			
-			<div>
-				<label for="password">Password</label>
-				<input type="password" name="password" />
-			</div>
-			
-			<div>
-				<input type="checkbox" id="optIn" name="optIn" value="x" />
-				<label for="optIn">Join our mailing list</label>
-			</div>
+			<fieldset>
+				<legend>Account Information &amp; Preferences</legend>
 				
-			<div>
-				<label for="phoneNumber">Phone Number</label>
-				<input type="tel" name="phoneNumber" />
-			</div>
-			
-			<div>
-				<label for="postalCode">Postal Code</label>
-				<input type="text" name="postalCode" pattern="[0-9]*" />
-			</div>
-			
-			
+				<div><label for="name">First &amp; Last Name</label></div>
+				<div><input type="text" name="name" /></div>
+				
+				<div><label for="country">Country</label></div>
+				<div>
+					<select id="country" name="country" placeholder"">
+						<option value="">Select Your Country</option>
+						<option value="US">United States</option>
+						<option value="CA">Canada</option>
+					</select>
+				</div>
+				
+				<div><label for="postalCode">Postal Code</label></div>
+				<div>
+					<input type="text" name="postalCode" pattern="[0-9]*" />
+				</div>
+								
+				<div><label for="phoneNumber">Phone Number</label></div>
+				<div><input type="tel" name="phoneNumber" /></div>
+				
+				<div><label for="email">Email Address</label></div>
+				<div><input type="email" name="email" /></div>
+				
+				<div><label for="password">Password</label></div>
+				<div><input type="password" name="password" /></div>
+				
+				<div>
+					<input type="checkbox" id="optIn" name="optIn" value="Y" />
+					<label for="optIn">Join our mailing list</label>
+				</div>
+					
+				<fieldset>
+					<legend>Gender</legend>
+					<div>
+						<input type="radio" id="genderMale" name="gender" value="M" />
+						<label for="genderMale">Male</label>
+					</div>
+					<div>
+						<input type="radio" id="genderFemale" name="gender" value="F" /> <label for="genderFemale">Female</label>
+					</div>
+				</fieldset>
+
+			</fieldset>			
 		</form>
+		
+		<button id="applyPlaceholders">Apply Placeholders</button>
+		<button id="applyPlaceholdersWithOptions">Apply Placeholders, Don't Hide <code>select</code> labels</button>
 		
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="./jquery.htm5placeholders.js"></script>
@@ -44,8 +83,18 @@
 		<script type="text/javascript">
 		//<![CDATA[
 			$(document).ready(function() {
+				//$('#testForm').html5placeholders();
+			});
+			
+			$('#applyPlaceholders').click(function () {
 				$('#testForm').html5placeholders();
 			});
+			
+			$('#applyPlaceholdersWithOptions').click(function () {
+				$('#testForm').html5placeholders( { hideSelectLabels: false } );
+			});
+
+			
 		//]]>
 		</script>
 		
