@@ -1,6 +1,6 @@
 {
 	"name": "jquery.html5placeholders",
-	"version": "0.1",
+	"version": "0.2",
 	"title": "jquery.html5placeholders()",
 	"author": {
 		"name": "Scott Rossillo",
@@ -8,12 +8,12 @@
 	},
 	"licenses": [
 		{
-			"type": "LGPLv2.1"
+			"type": "LGPLv2.1",
 			"url": "http://www.gnu.org/licenses/lgpl-2.1.txt"
 		}
 	],
 	"dependencies": {
-		"jquery": "1"
+		"jquery": ">=1.4.2"
 	},
 	"description": "Plugin to simplify working with HTML labels when HTML5 placeholder support is present.",
 	"keywords": [
