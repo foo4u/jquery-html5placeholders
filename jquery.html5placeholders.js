@@ -36,7 +36,7 @@
 				$form.find('input').each(function() {
 					
 					var $field = $(this),
-						$label = $form.find('label[for=' + $field.attr('name') +']').first();
+						$label = $form.find('label[for=' + $field.attr('id') +']').first();
 					
 					if($label.length && inputTypeSupported( $field )) {
 						$field.attr('placeholder', $label.text());
@@ -47,7 +47,7 @@
 				// hide select labels if requested
 				if( settings.hideSelectLabels ) {
 					$form.find('select').each(function() {
-						$form.find('label[for=' + $(this).attr('name') +']').hide();	
+						$form.find('label[for=' + $(this).attr('id') +']').hide();	
 					});
 				}	
 			}
