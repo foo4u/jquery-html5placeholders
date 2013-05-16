@@ -35,7 +35,7 @@ Create an HTML form with a label for each input:
 	<form id="testForm" name="test">
 		<div>
 			<label for="name">First &amp; Last Name</label>
-			<input type="text" name="name" />
+			<input id="name" type="text" name="name" />
 		</div>
 	</form>
 
@@ -43,7 +43,7 @@ On browsers that support HTML5 placeholders, this plugin converts the form to:
 
 	<form id="testForm" name="test">
 		<div>
-			<input type="text" name="name" placeholder="First &amp; Last Name" />
+			<input id="name" type="text" name="name" placeholder="First &amp; Last Name" />
 		</div>
 	</form>
 
