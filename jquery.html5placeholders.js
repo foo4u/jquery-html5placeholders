@@ -22,7 +22,10 @@
 	
 		var settings = $.extend(
 			{
-				hideSelectLabels: true
+				hideSelectLabels: true,
+				hideMethod: function(ele) {
+          ele.hide();
+        }
 			}, 
 			options
 		);
@@ -40,14 +43,14 @@
 					
 					if($label.length && inputTypeSupported( $field )) {
 						$field.attr('placeholder', $label.text());
-						$label.hide();
+						settings.hideMethod($label);
 					}
 				});
 				
 				// hide select labels if requested
 				if( settings.hideSelectLabels ) {
 					$form.find('select').each(function() {
-						$form.find('label[for=' + $(this).attr('id') +']').hide();	
+						settings.hideMethod($form.find('label[for=' + $(this).attr('id') +']'));
 					});
 				}	
 			}
