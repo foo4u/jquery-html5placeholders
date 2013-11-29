@@ -24,8 +24,8 @@
 			{
 				hideSelectLabels: true,
 				hideMethod: function(ele) {
-          ele.hide();
-        }
+					ele.hide();
+				}
 			}, 
 			options
 		);
