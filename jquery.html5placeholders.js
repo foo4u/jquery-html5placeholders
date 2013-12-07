@@ -23,8 +23,8 @@
 		var settings = $.extend(
 			{
 				hideSelectLabels: true,
-				hideMethod: function(ele) {
-					ele.hide();
+				hideMethod: function(el) {
+					el.css('position', 'absolute').css('clip', 'rect(1px, 1px, 1px, 1px)');
 				}
 			}, 
 			options
