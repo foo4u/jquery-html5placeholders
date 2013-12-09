@@ -1,11 +1,11 @@
 {
 	"name": "html5placeholders",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"title": "HTML5 Placeholders",
-	"description": "Provides a plugin to simplify working with HTML labels and HTML5 placeholders in form input tags. This plugin aims to simplify development of forms in which you want display input tags with HTML5 placeholders instead of label tags on clients that support HTML5 but fall back to label tags when the placeholder attribute isn't supported. You code your forms with standard label elements and then invoke this plugin to convert those labels  into placeholders. The plugin operates using progressive enhancement to provide backwards compatibility with browsers lacking placeholder support",
+	"description": "Provides a plugin to simplify working with HTML labels and HTML5 placeholders in form input tags. This plugin aims to simplify development of forms in which you want display input tags with HTML5 placeholders instead of label tags on clients that support HTML5 but fall back to label tags when the placeholder attribute isn't supported. You code your forms with standard label elements and then invoke this plugin to convert those labels into placeholders in screen reader friendly manner. The plugin operates using progressive enhancement to provide backwards compatibility with browsers lacking placeholder support.",
 	"author": {
-		"name": "Scott Rossillo",
-		"url": "https://github.com/foo4u"
+		"name": "Scott Rossillo and contributors",
+		"url": "https://github.com/foo4u/jquery-html5placeholders/blob/master/AUTHORS.md"
 	},
 	"licenses": [
 		{
@@ -25,6 +25,6 @@
 		"placeholder"
 	],
 	"homepage" : "https://github.com/foo4u/jquery-html5placeholders",
-	"docs" : "https://github.com/foo4u/jquery-html5placeholders/blob/master/README.md",
+	"docs" : "https://github.com/foo4u/jquery-html5placeholders/blob/v1.2.0/README.md",
 	"bugs" : "https://github.com/foo4u/jquery-html5placeholders/issues"
 }
