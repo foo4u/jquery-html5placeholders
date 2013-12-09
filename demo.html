@@ -76,6 +76,7 @@
 		
 		<button id="applyPlaceholders">Apply Placeholders</button>
 		<button id="applyPlaceholdersWithOptions">Apply Placeholders, Don't Hide <code>select</code> labels</button>
+		<button id="applyPlaceholdersWithCustomFn">Apply Placeholders, Using Custom Hide Function</button>
 		
 		<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 		<script type="text/javascript" src="./jquery.html5placeholders.js"></script>
@@ -89,8 +90,13 @@
 			$('#applyPlaceholdersWithOptions').click(function () {
 				$('#testForm').html5placeholders( { hideSelectLabels: false } );
 			});
+
+			$('#applyPlaceholdersWithCustomFn').click(function () {
+				$('#testForm').html5placeholders( { hideMethod: function(el) { el.hide() } } );
+			});
 		//]]>
 		</script>
 		
 	</body>
 </html>
+
