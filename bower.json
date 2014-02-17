@@ -1,0 +1,28 @@
+{
+  "name": "jquery-htm5placeholders",
+  "version": "1.2.1",
+  "homepage": "https://github.com/foo4u/jquery-html5placeholders",
+  "authors": [
+    "Scott Rossillo <scott@rossillo.net>"
+  ],
+  "description": "Provides a plugin to simplify working with HTML labels and HTML5 placeholders in form input tags.",
+  "main": "jquery.html5placeholders.js",
+  "keywords": [
+    "jquery",
+    "placeholder",
+    "html5",
+    "form",
+    "forms",
+    "input",
+    "label"
+  ],
+  "license": "LGPLv2.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "demo.html"
+  ]
+}
